@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ContactSection = () => {
+const ContactSection = ({phone}) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -123,13 +123,13 @@ const ContactSection = () => {
               📍 <strong>Kainchi dham, Uttarakhand 263132</strong>
             </p>
             <p>
-              📞 <span className="text-[#de5b38]">+919521623715</span>
+              📞 <span className="text-[#de5b38]">{phone}</span>
             </p>
             <p className="flex gap-1 items-center">
               <span className="text-green-600">
                 <IoLogoWhatsapp />
               </span>{" "}
-              <span className="text-[#de5b38]">+919521623715</span>
+              <span className="text-[#de5b38]">{phone}</span>
             </p>
             <p>
               📧{" "}

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-const HeroAshramSection = () => {
+const HeroAshramSection = ({phone}) => {
   const headingRef = useRef(null);
   const subHeadingRef = useRef(null);
   const buttonsRef = useRef(null);
@@ -75,12 +75,12 @@ const HeroAshramSection = () => {
           ref={buttonsRef}
           className="flex flex-wrap justify-center gap-4 text-sm"
         >
-          <a href="tel:+919521623715">
+          <a href={`tel:${phone}`}>
             <button className="bg-red-500 text-xs hover:bg-red-600 text-white px-4 py-2 rounded-full shadow-lg transition">
               📞 CALL NOW
             </button>
           </a>
-          <a href="https://wa.me/+919521623715">
+          <a href={`https://wa.me/${phone}`}>
             <button className="bg-red-500 text-xs hover:bg-red-600 flex gap-1 justify-center items-center text-white px-4 py-2 rounded-full shadow-lg transition">
               <span className="text-green-600">
                 <IoLogoWhatsapp />
@@ -88,7 +88,7 @@ const HeroAshramSection = () => {
               WHATSAPP NOW
             </button>
           </a>
-          <a href="https://wa.me/+919521623715">
+          <a href={`https://wa.me/${phone}`}>
             <button className="bg-red-500 text-xs hover:bg-red-600 text-white px-4 py-2 rounded-full shadow-lg transition">
               📧 MAIL NOW
             </button>

@@ -32,7 +32,7 @@ const rooms = [
   },
 ];
 
-const Rooms = () => {
+const Rooms = ({phone}) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -99,7 +99,7 @@ const Rooms = () => {
                 <span className="font-GeorgiaRef">Price:</span>{" "}
                 <span>{room.price}</span>
               </p>
-              <a href="https://wa.me/+919521623715">
+              <a href={`https://wa.me/${phone}`}>
                 <button className="px-4 py-1 bg-orange-600 w-fit text-white rounded-full font-mono text-xs font-bold">
                   Book Now
                 </button>
